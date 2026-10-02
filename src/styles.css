@@ -168,7 +168,7 @@
   .site-nav.is-open { display: flex; }
   .site-nav a { font-size: 17px; padding: 13px 0; }
   .site-nav .nav-contact { margin-top: 12px; justify-content: space-between; padding: 14px; }
-  .hero { min-height: 780px; height: 100svh; max-height: 920px; align-items: flex-start; background-position: 40% center; }
+  .hero { min-height: 760px; height: calc(100svh - 46px); max-height: 920px; align-items: flex-start; background-position: 40% center; }
   .hero-grid { background-size: 80px 80px; }
   .hero-content { padding: 130px 24px 0; }
   .hero-eyebrow { font-size: 9px; margin-bottom: 17px; }

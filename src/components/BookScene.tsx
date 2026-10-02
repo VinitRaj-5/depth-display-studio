@@ -9,7 +9,7 @@ function tokenColor(token: string) {
   if (!context) return new THREE.Color();
   context.fillStyle = value;
   context.fillRect(0, 0, 1, 1);
-  const [r, g, b] = context.getImageData(0, 0, 1, 1).data;
+  const [r = 0, g = 0, b = 0] = context.getImageData(0, 0, 1, 1).data;
   return new THREE.Color().setRGB(r / 255, g / 255, b / 255, THREE.SRGBColorSpace);
 }
 
@@ -119,8 +119,8 @@ export default function BookScene() {
       camera.aspect = width / height;
       camera.fov = width < 700 ? 44 : 34;
       camera.updateProjectionMatrix();
-      group.scale.setScalar(width < 700 ? 0.68 : Math.min(1, width / 1300));
-      group.position.set(width < 700 ? 0 : 2.25, width < 700 ? -1.12 : -0.2, 0);
+      group.scale.setScalar(width < 700 ? 0.43 : Math.min(1, width / 1300));
+      group.position.set(width < 700 ? 0 : 2.25, width < 700 ? -2.3 : -0.2, 0);
     };
     const observer = new ResizeObserver(resize);
     observer.observe(mount);
@@ -146,7 +146,7 @@ export default function BookScene() {
       group.rotation.y += (targetY - group.rotation.y) * 0.055;
       group.rotation.x += ((reduced ? 0 : -pointerY * 0.065 + scrollProgress * 0.12) - group.rotation.x) * 0.055;
       group.rotation.z = reduced ? -0.08 : -0.08 + Math.sin(t * 0.47) * 0.018;
-      group.position.y = (width < 700 ? -1.12 : -0.2) + (reduced ? 0 : Math.sin(t * 0.8) * 0.09) - scrollProgress * 0.3;
+      group.position.y = (width < 700 ? -2.3 : -0.2) + (reduced ? 0 : Math.sin(t * 0.8) * 0.09) - scrollProgress * 0.3;
       renderer.render(scene, camera);
     };
     animate();

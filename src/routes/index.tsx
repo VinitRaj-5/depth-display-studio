@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, GraduationCap, Menu, Sparkles, Target, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import buildingAsset from "@/assets/image1.jpeg.asset.json";
@@ -7,8 +7,7 @@ import founderAsset from "@/assets/image31.jpeg.asset.json";
 import groupAsset from "@/assets/image11.jpeg.asset.json";
 import groupTwoAsset from "@/assets/image24.jpeg.asset.json";
 import resultsAsset from "@/assets/image35.jpeg.asset.json";
-
-const BookScene = lazy(() => import("@/components/BookScene"));
+import BookScene from "@/components/BookScene";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,7 +71,7 @@ function Index() {
 
       <section id="top" className="hero" style={{ backgroundImage: `linear-gradient(90deg, var(--hero-shade) 0%, var(--hero-shade-mid) 55%, var(--hero-shade-edge) 100%), url(${buildingAsset.url})` }}>
         <div className="hero-grid" aria-hidden="true" />
-        <Suspense fallback={null}><BookScene /></Suspense>
+        <BookScene />
         <div className="hero-content">
           <div className="eyebrow hero-eyebrow"><span className="eyebrow-line" /> A PLACE TO BECOME</div>
           <h1>The Learning<br /><em>Room.</em></h1>
