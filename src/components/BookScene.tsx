@@ -119,8 +119,8 @@ export default function BookScene() {
       camera.aspect = width / height;
       camera.fov = width < 700 ? 44 : 34;
       camera.updateProjectionMatrix();
-      group.scale.setScalar(width < 700 ? 0.34 : Math.min(0.78, width / 1600));
-      group.position.set(width < 700 ? 0 : 1.7, width < 700 ? -2.6 : -0.2, 0);
+      group.scale.setScalar(width < 700 ? 0.48 : Math.min(0.78, width / 1600));
+      group.position.set(width < 700 ? 0 : 2, width < 700 ? -2.6 : -0.2, 0);
     };
     const observer = new ResizeObserver(resize);
     observer.observe(mount);
