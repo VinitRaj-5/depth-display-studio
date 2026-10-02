@@ -79,7 +79,7 @@
   .site-nav a { font-size: 12px; font-weight: 500; color: var(--ink-soft); text-decoration: none; transition: color .25s; }
   .site-nav a:hover { color: var(--foreground); }
   .site-nav .nav-contact { display: flex; align-items: center; gap: 16px; color: var(--gold); border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent); padding: 11px 16px; }
-  .menu-toggle { display: none; }
+  .site-header .menu-toggle { display: none; }
   .hero { min-height: min(850px, 100svh); height: 100svh; max-height: 1000px; position: relative; isolation: isolate; background-size: cover; background-position: center; overflow: hidden; display: flex; align-items: center; }
   .hero-grid { position: absolute; inset: 0; z-index: -1; opacity: .14; background-image: linear-gradient(to right, var(--foreground) 1px, transparent 1px), linear-gradient(to bottom, var(--foreground) 1px, transparent 1px); background-size: 130px 130px; mask-image: linear-gradient(to right, transparent, black); }
   .book-scene { position: absolute; inset: 0; z-index: 1; cursor: grab; }
@@ -163,7 +163,7 @@
   .site-header { height: 72px; padding: 0 22px; }
   .brand-mark { width: 39px; height: 39px; }
   .brand-name { font-size: 10px; }
-  .menu-toggle { display: inline-flex; position: relative; z-index: 32; color: var(--foreground); }
+  .site-header .menu-toggle { display: inline-flex; position: relative; z-index: 32; color: var(--foreground); }
   .site-nav { position: absolute; top: 72px; left: 0; right: 0; display: none; background: var(--background); padding: 20px 24px 28px; border-bottom: 1px solid var(--border); flex-direction: column; align-items: stretch; gap: 0; }
   .site-nav.is-open { display: flex; }
   .site-nav a { font-size: 17px; padding: 13px 0; }
